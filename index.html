@@ -35,9 +35,25 @@
     text-align: center; 
 }
 
+.footer {
+    margin-top: 32px;
+    font-size: 32px;
+    font-family: "dream";
+    width: auto;
+    text-align: center;
+}
+
 .container {
     position: absolute;
 }
+
+@font-face {
+  font-family: 'dream';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./jscss/dream.ttf');
+}
+
 
 @font-face {
   font-family: 'Regular';
@@ -106,7 +122,7 @@ function updateNumbers() {
     if (hours < 10)
         hours = "0" + hours;
     duration = parseInt(duration / 24);
-    var days = duration;
+    var days = duration+1;
     $('.days-number').text("" + days);
     $('.seconds').text(hours + " hours " + minutes + " minutes " + seconds + " seconds");
     setTimeout("updateNumbers()", 1000);
@@ -124,7 +140,8 @@ function updateNumbers() {
         <span class="days-number">1921</span>
         <span class="days-label">days</span>
       </div>
-      <div class="seconds">15 hours 24 minutes 30 seconds</div>
+      <div class="footer">你是我日复一日的梦想</div>
+
     </div>
    
 </body>
